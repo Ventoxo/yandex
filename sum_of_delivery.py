@@ -47,13 +47,14 @@ def create_dict_of_distance():
 
 
 def count_on_distance(distance):
-    distance = math.ceil(distance)
-
-    if distance >= 200:
+    n_distance = math.ceil(distance)
+    if n_distance > distance:
+        n_distance -= 1
+    if n_distance >= 200:
         return None
     distance_to_sum = create_dict_of_distance()
 
-    return distance_to_sum[distance]
+    return distance_to_sum[n_distance]
 
 
 def count_on_profile(profile):
@@ -105,7 +106,7 @@ def count_of_delivery(distance, profile, fragility, level_of_stress="default"):
     sum_on_profile = count_on_profile(profile)
     sum_on_stress = stress_of_delivery(level_of_stress)
     try:
-        sum_of_delivery = sum_on_fragility + sum_on_distance + sum_on_profile + sum_on_stress
+        sum_of_delivery = (sum_on_fragility + sum_on_distance + sum_on_profile) * sum_on_stress
     except Exception:
         return None
 

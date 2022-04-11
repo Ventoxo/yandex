@@ -31,7 +31,6 @@ class TestCountSumOfDeliveryPositive():
                               (random.uniform(2, 10), 'маленькие габариты', 0, 'пОвышЕнная загружеНность'),
 
                               (random.uniform(2, 10), 'большие габариты', 0, 'default'),
-                              (random.uniform(2, 10), 'большие габариты', 0, 'вЫсокАя загружеНность'),
                               (random.uniform(2, 10), 'большие габариты', 0, 'пОвышЕнная загружеНность'),
 
                               (random.uniform(10, 30), 'маленькие габариты', 0, 'default'),
