@@ -113,5 +113,3 @@ def count_of_delivery(distance, profile, fragility, level_of_stress="default"):
         return 400
     else:
         return sum_of_delivery
-
-print(count_of_delivery(0, 'маленькие габариты', 0))
